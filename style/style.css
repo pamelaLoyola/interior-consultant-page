@@ -66,3 +66,44 @@ header nav ul li a:hover, a.active{
 .menu-toggle{
     display: none;
 }
+
+@media (max-width: 990px) {
+
+    header{
+        padding: 20px 40px;
+    }
+
+    header nav{
+        position: absolute;
+        top: 72px;
+        left: -100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: calc(100vh - 72px);
+        background-color: var(--primary-color);
+        transition: 250ms left ease-in-out;
+    }
+
+    header nav.active{
+        left: 0;
+    }
+
+    header nav ul{
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul li{
+        display: block;
+        padding: 30px 0;
+    }
+    
+    .menu-toggle{
+        display: block;
+        font-size: 1.6rem;
+        color: var(--text-color);
+        cursor: pointer;
+    }
+}

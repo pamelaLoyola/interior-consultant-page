@@ -21,7 +21,7 @@
 <body>
     <header>
       <a href="#">This interior</a>
-      <nav>
+      <nav id="nav">
         <ul>
           <li><a href="#" class="active">Home</a></li>
           <li><a href="#">Collection</a></li>
@@ -29,7 +29,21 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      <div class="menu-toggle" onclick="showMenuBar();"><i id="menu-icon" class="fas fa-bars"></i></div>
     </header>
+
+    <script>
+      const menuToggle = document.getElementsByClassName('menu-toggle');
+
+      function showMenuBar(){
+         
+         const nav = document.getElementById('nav');
+         const menuIcon = document.getElementById('menu-icon');
+
+         nav.classList.toggle('active');
+         menuIcon.classList.toggle('fa-times');
+
+      }
+    </script>
 </body>
 </html>
